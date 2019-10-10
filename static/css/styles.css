@@ -1,0 +1,86 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+div {
+    font-family: "Segoe UI Light", "Microsoft Yahei", sans-serif;
+	font-weight: lighter;
+}
+
+p {
+
+    font-size: 18px;
+
+}
+
+i{
+    color: #aadbf3;
+    transition: color 0.5s;
+    transition-duration: 0.5s;
+}
+
+i:hover {
+    
+    color: #ff713f;
+    transition: color 0.5s;
+    transition-duration: 0s;
+    
+}
+
+.qr {
+    
+    opacity: 0;
+    
+}
+
+#text:hover {
+    
+    background-size: 100% 2px;
+    
+}
+
+#text {
+
+    color: #ff713f;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #ff713f, #ff713f);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: .5s ease;
+
+}
+
+.bg{
+    
+    background-image: linear-gradient(to top, #ff713f, #ff713f);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    animation-name: wipe;
+    animation-duration: 1.25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes wipe{
+    
+    0% {background-size: 100% 0%;}
+    50% {background-size: 100% 60%;}
+    100% {background-size: 100% 100%;}
+
+}
+
+.center-abs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
