@@ -1,6 +1,6 @@
 var greeting = ["Hola, this is fofu.", "", "#ffffff"];
 var qq = ["570431231", "https://qm.qq.com/cgi-bin/qm/qr?k=hUWxfPBcb9m0Odid24TrVRfi96ULio4M", "#12b7f5"];
-var instagram = ["instagr.am/dispnt", "https://instagram.com/dispnt", "#3f729b"];
+var arcamera = ["Fursona in AR", "https://fofu.dispnt.com/AR", "#3f729b"];
 var twitter = ["@dispnt", "https://twitter.com/dispnt", "#1DA1F2"];
 var z = 0;
 var wipeId = 0;
@@ -67,9 +67,9 @@ $(document).ready(function () {
         fadeinorout(".1", "0", "qq", "qrqq");
     })
     $(".2 i").hover(function () {
-        fadeinorout(".2", "1", "instagram", "qrins");
+        fadeinorout(".2", "1", "arcamera", "qrar");
     }, function () {
-        fadeinorout(".2", "0", "instagram", "qrins");
+        fadeinorout(".2", "0", "arcamera", "qrar");
     })
 
     $(".3 i").hover(function () {
