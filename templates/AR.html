@@ -1,0 +1,52 @@
+﻿<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js" integrity="sha256-SNDsmWBFQwJAjxLymQu5Fqh6rW4RKLJXUQboy3O0BUA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@master/aframe/build/aframe-ar-nft.js"></script>
+
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+
+<body style="margin : 0px; overflow: hidden;">
+  <div class="arjs-loader">
+    <div>
+	It takes up to 10 seconds to load... <br>
+	refresh it if wait too long<br>
+	Rotate screen to landscape for better view
+	</div>
+  </div>
+    <a-scene
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+
+        <a-nft
+            type="nft" 
+			url="https://cdn.jsdelivr.net/gh/Dispnt/fofu.dispnt.com@master/static/ar/model/cardfront"
+            smooth="true" smoothCount="10">
+            <a-entity
+                gltf-model="{{ url_for('static', filename='ar/Fox.gltf') }}"
+                scale="2 2 2"
+                position="50 150 0"
+                >
+            </a-entity>
+        </a-nft>
+		<a-entity camera></a-entity>
+    </a-scene>
+</body>
