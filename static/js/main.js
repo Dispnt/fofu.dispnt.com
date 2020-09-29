@@ -86,5 +86,5 @@ $(document).ready(function () {
     $("#img").click(function () {
         fadeinorout(".0", "1", "greeting", "greeting");
     })
-
+    console.log("Github:https://github.com/Dispnt/fofu.dispnt.com/");
 });
