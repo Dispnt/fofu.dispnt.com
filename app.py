@@ -6,7 +6,7 @@ steamID = ""
 api = f'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={steamKey}&steamids={steamID}'
 
 app = Flask(__name__)
-
+app.debug = True
 @app.route('/')
 def hello():
     steamProfile = requests.get(api).json()
@@ -20,5 +20,6 @@ def hello():
 def arroute():
     return render_template('AR.html')
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

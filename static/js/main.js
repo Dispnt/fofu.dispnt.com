@@ -2,6 +2,8 @@ var greeting = ["Hola, this is fofu.", "", "#ffffff"];
 var qq = ["570431231", "https://qm.qq.com/cgi-bin/qm/qr?k=hUWxfPBcb9m0Odid24TrVRfi96ULio4M", "#12b7f5"];
 var arcamera = ["Fursona in AR", "https://fofu.dispnt.com/AR", "#3f729b"];
 var twitter = ["@dispnt", "https://twitter.com/dispnt", "#1DA1F2"];
+var character = ["Character Sheet", "https://fofu.dispnt.com/CS", "#f7a082"]
+
 var z = 0;
 var wipeId = 0;
 
@@ -83,8 +85,14 @@ $(document).ready(function () {
         fadeinorout(".4", "0", "steam", "qrsteam");
     })
 
-    $("#img").click(function () {
+    $("#img").hover(function () {
         fadeinorout(".0", "1", "greeting", "greeting");
+    }, function () {
+        fadeinorout(".0", "0", "greeting", "greeting");
+    })
+
+    $("#img").click(function () {
+        fadeinorout(".0", "1", "character", "character");
     })
     console.log("Github:https://github.com/Dispnt/fofu.dispnt.com/");
 });
