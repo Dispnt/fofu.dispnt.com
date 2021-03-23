@@ -1,0 +1,51 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"
+        integrity="sha256-SNDsmWBFQwJAjxLymQu5Fqh6rW4RKLJXUQboy3O0BUA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@master/aframe/build/aframe-ar-nft.js"></script>
+
+<style>
+    .arjs-loader {
+        position: absolute;
+        height: 200%;
+        width: 100%;
+        background-color: rgba(255,127,80,0.8);
+    }
+    #instruction {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        margin:25% auto;
+        text-align: center;
+        font-size: 1.25em;
+        color: black;
+    }
+
+</style>
+
+
+<body style="margin : 0px; overflow: hidden;">
+
+<div class="arjs-loader">
+    <div id="instruction">
+        Put name card on a flat surface.<br>
+        Rotate screen to landscape for better view.
+    </div>
+</div>
+
+<a-scene
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+    <a-nft
+            type="nft"
+            url="https://cdn.jsdelivr.net/gh/Dispnt/fofu.dispnt.com@master/static/ar/model/cardfront"
+            smooth="true" smoothCount="10">
+        <a-entity
+                gltf-model="ar/Fox.gltf"
+                scale="2 2 2"
+                position="50 150 0"
+        >
+        </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
