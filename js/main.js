@@ -7,7 +7,7 @@ var twitter = ["@dispnt", "https://twitter.com/dispnt", "#1DA1F2"];
 var character = ["Character Sheet", "https://fofu.dispnt.com/CS", "#f7a082"]
 
 $(document).ready(function(){
-	$.getJSON("https://service-d2s4xb2m-1258641282.hk.apigw.tencentcs.com/release/fofu_dispnt_com", function(res) {
+	$.getJSON("http://api.fofu.dispnt.com/release/fofu_dispnt_com", function(res) {
 		info = JSON.parse(res);
 	});
 })
